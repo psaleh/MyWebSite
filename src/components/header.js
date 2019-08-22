@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 
 import styled from 'styled-components'
+import GlobalStyle from './globalStyles'
 
 
 const StyledLink = styled(props => <Link {...props} />)`
@@ -11,14 +12,12 @@ const StyledLink = styled(props => <Link {...props} />)`
 `;
 
 const Container = styled.header`
-  max-width: 1010px;
   padding: 26px 20px;
   width: 100%;
   display: flex;
   align-items: center;
   margin: 0 auto;
   background-color: #1f2833;
-  font-family: fantasy;
 `;
 
 const NavLeft = styled.div`
@@ -34,12 +33,11 @@ const NavRight = styled.div`
 
 const Header = ({ siteTitle }) => (
   <Container>
+    <GlobalStyle />
     <NavLeft>    
-      <h2>
         <StyledLink to="/">
           {siteTitle}
         </StyledLink>
-      </h2>
     </NavLeft>
     <NavRight>
       <StyledLink to="about">
