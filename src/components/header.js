@@ -13,15 +13,12 @@ const StyledLink = styled(props => <Link {...props} />)`
 
 const Container = styled.header`
   padding: 26px 20px;
-  width: 100%;
   display: flex;
   align-items: center;
-  margin: 0 auto;
   background-color: #1f2833;
 `;
 
 const NavLeft = styled.div`
-  width: 33.333%;
   text-align: left;
   flex: auto
 `;
