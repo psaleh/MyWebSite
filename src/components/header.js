@@ -12,19 +12,24 @@ const StyledLink = styled(props => <Link {...props} />)`
 `;
 
 const Container = styled.header`
-  padding: 26px 20px;
+  height: 60px;
   display: flex;
   align-items: center;
   background-color: #1f2833;
+  z-index: 1;
+  position: fixed;
+  width: 100%;
 `;
 
 const NavLeft = styled.div`
-  text-align: left;
-  flex: auto
+  align-content: left;
+  align-items: center;
+  margin-left: 20px;
 `;
 const NavRight = styled.div`
-  width: auto;
-  text-align: right;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 `;
 
 
