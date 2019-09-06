@@ -9,7 +9,19 @@ import Footer from './footer'
 
 const MyMain = styled.main`
   display: grid;
-  grid-template-areas: "hero hero hero hero" "words1 pic1 words2 pic2" "pic3 words3 pic4 words4";
+  grid-gap: 20px;
+  grid-template-areas: 
+    "hero hero hero hero" 
+    "words1 pic1 words2 pic2" 
+    "pic3 words3 pic4 words4";
+  background-color: pink;
+
+  @media(max-width: 768px) {
+    grid-template-areas: 
+      "hero hero" 
+      "words1 pic1" 
+      "pic2 words2";
+  }
 `
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

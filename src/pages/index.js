@@ -24,15 +24,24 @@ const TransOver = styled.div`
 
 const TextBoxDiv = styled.div`
   background-color: #C5C6C7;
-  padding-left: 5px;
-  height: 100px;
+  height: 320px;
+  width: 320px;
   grid-area: ${props => props.area};
+  border-radius: 30px;
 `
 const PhotoBoxDiv = styled.div`
   background-color: pink;
-  padding-left: 5px;
-  height: 100px;
+  height: 320px;
+  width: 320px;
   grid-area: ${props => props.area};
+  border-radius: 30px;
+`
+const Image = styled.img`
+  height: 300px;
+  width: 300px;
+  padding: 10px;
+  border-radius: 30px;
+
 `
 
 
@@ -48,7 +57,7 @@ const IndexPage = () => (
         One
       </TextBoxDiv>
       <PhotoBoxDiv area="pic1">
-        Two
+        <Image src='https://www.injohnnyskitchen.com/wp-content/uploads/2017/07/Anna-Ivanova-Beetroot-soup-with-mint-chia-flax-pumpkin-seeds.jpg' />
       </PhotoBoxDiv>
       <TextBoxDiv area="words2">
         Three
