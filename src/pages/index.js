@@ -8,6 +8,7 @@ import styled from 'styled-components'
 const BackImage = styled.div`
   height: 400px;
   background-image: url(${img});
+  grid-area: hero;
 `
 const TransOver = styled.div`
   background-color: #1F2833;
@@ -21,28 +22,52 @@ const TransOver = styled.div`
   font-size: 96px;
 `
 
-const MyDiv2 = styled.div`
+const TextBoxDiv = styled.div`
   background-color: #C5C6C7;
   padding-left: 5px;
-  height: 1000px;
+  height: 100px;
+  grid-area: ${props => props.area};
+`
+const PhotoBoxDiv = styled.div`
+  background-color: pink;
+  padding-left: 5px;
+  height: 100px;
+  grid-area: ${props => props.area};
 `
 
 
 
 const IndexPage = () => (
   <Layout>
-    <section>
       <BackImage>
         <TransOver>
           Hello
         </TransOver>
       </BackImage>
-    </section>
-    <section>
-      <MyDiv2>
-        Hello
-      </MyDiv2>
-    </section>
+      <TextBoxDiv area="words1">
+        One
+      </TextBoxDiv>
+      <PhotoBoxDiv area="pic1">
+        Two
+      </PhotoBoxDiv>
+      <TextBoxDiv area="words2">
+        Three
+      </TextBoxDiv>
+      <PhotoBoxDiv area="pic2">
+        Four
+      </PhotoBoxDiv>
+      <TextBoxDiv area="words3">
+        Five
+      </TextBoxDiv>
+      <PhotoBoxDiv area="pic3">
+        Six
+      </PhotoBoxDiv>
+      <TextBoxDiv area="words4">
+        Seven
+      </TextBoxDiv>
+      <PhotoBoxDiv area="pic4">
+        Eight
+      </PhotoBoxDiv>
   </Layout>
 )
 
